@@ -314,7 +314,7 @@ type NameLike interface {
 	Accessible[Folder]
 	Searchable[Folder]
 	Sequential[Folder]
-	Spectral[NameLike]
+	Ordered[NameLike]
 }
 
 /*
@@ -373,7 +373,7 @@ type QuoteLike interface {
 	Accessible[rune]
 	Searchable[rune]
 	Sequential[rune]
-	Spectral[QuoteLike]
+	Ordered[QuoteLike]
 }
 
 /*
@@ -409,7 +409,7 @@ type VersionLike interface {
 	Accessible[uint]
 	Searchable[uint]
 	Sequential[uint]
-	Spectral[VersionLike]
+	Ordered[VersionLike]
 }
 
 // ASPECT DECLARATIONS
@@ -477,10 +477,10 @@ type Sequential[V any] interface {
 }
 
 /*
-Spectral[V any] is an aspect interface that declares a set of method signatures
-that must be supported by each instance of a spectral concrete class.
+Ordered[V any] is an aspect interface that declares a set of method signatures
+that must be supported by each instance of an ordered concrete class.
 */
-type Spectral[V any] interface {
+type Ordered[V any] interface {
 	AsSource() string
 	IsBefore(
 		value V,

@@ -116,7 +116,7 @@ type (
 	Accessible[V any] = str.Accessible[V]
 	Searchable[V any] = str.Searchable[V]
 	Sequential[V any] = str.Sequential[V]
-	Spectral[V any]   = str.Spectral[V]
+	Ordered[V any]    = str.Ordered[V]
 )
 
 // CLASS ACCESSORS
